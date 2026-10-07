@@ -1,0 +1,217 @@
+.sponsors-section {
+  background-color: #0b0b0b;
+  color: white;
+  padding: 6rem 2rem;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.sponsors-title {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: #e60000; /* Red accent */
+  font-weight: 700;
+}
+
+.sponsors-intro {
+  font-size: 1.1rem;
+  color: #cccccc;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  line-height: 1.6;
+}
+
+.tier {
+  margin-bottom: 5rem;
+}
+
+.tier h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  border-bottom: 2px solid #e60000;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+.sponsor-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.sponsor-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 220px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sponsor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(230, 0, 0, 0.25);
+  border-color: #e60000;
+}
+
+.sponsor-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  filter: brightness(0.95);
+}
+
+.sponsor-card p {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Optional: subtle glow divider between tiers */
+.tier:not(:last-child)::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 1px;
+  background: rgba(230, 0, 0, 0.3);
+  margin: 3rem auto 0;
+}
+
+/* Mobile-friendly adjustments */
+@media (max-width: 768px) {
+  .sponsor-grid {
+    gap: 1.5rem;
+  }
+
+  .sponsor-card {
+    width: 80%;
+  }
+
+  .tier h2 {
+    font-size: 1.6rem;
+  }
+}
+.sponsor-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 220px;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  border: 1px solid transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sponsor-card:hover {
+  transform: translateY(-5px);
+  border-color: #e60000;
+  box-shadow: 0 0 15px rgba(230, 0, 0, 0.3);
+}
+
+.sponsor-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  filter: brightness(0.9);
+  transition: filter 0.2s ease;
+}
+
+.sponsor-card:hover img {
+  filter: brightness(1);
+}
+
+.sponsor-card p {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0;
+}
+
+/* Call to action section */
+.sponsor-cta {
+  margin-top: 6rem;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sponsor-cta h2 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.sponsor-cta p {
+  color: #ccc;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.sponsor-btn {
+  display: inline-block;
+  background-color: #e60000;
+  color: #fff;
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sponsor-btn:hover {
+  background-color: #ff1a1a;
+  transform: translateY(-3px);
+  color: rgb(75, 6, 106)
+}
+/* === CLEAN, BALANCED SPONSOR BUTTON === */
+.sponsor-btn {
+  display: inline-flex;                /* centers text perfectly */
+  align-items: center;
+  justify-content: center;
+  background-color: #e60000;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: "Rajdhani", sans-serif;
+  text-decoration: none;
+  border: none;
+  border-radius: 6px;
+  padding: 0.55rem 1.4rem;             /* top/bottom balanced */
+  line-height: 1;                      /* prevents text from adding extra height */
+  height: 38px;                        /* consistent shape */
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.sponsor-btn:hover {
+  background-color: #ff1a1a;
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.4);
+}
+
+/* Smaller, tighter mobile variant */
+@media (max-width: 768px) {
+  .sponsor-btn {
+    font-size: 0.9rem;
+    padding: 0.45rem 1.1rem;
+    height: 34px;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1400px) {
+  .sponsor-btn {
+    font-size: 1.1rem;
+    padding: 0.65rem 1.6rem;
+    height: 42px;
+  }
+}

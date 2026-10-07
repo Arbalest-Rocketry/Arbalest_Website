@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Rajdhani:wght@600&display=swap');
+
+/* ===== HERO ===== */
+.payload-hero {
+  position: relative;
+  height: 85vh;               /* desktop/tablet height */
+  width: 100%;
+  overflow: hidden;
+  /* performance: do nothing offscreen until needed */
+  content-visibility: auto;
+  contain-intrinsic-size: 60vh;
+}
+
+.payload-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 45%;
+  filter: brightness(0.75) contrast(1.1) saturate(1.1);
+  display: block;
+}
+
+.payload-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.8) 80%
+  );
+  z-index: 1;
+  pointer-events: none; /* overlay should never block clicks */
+}
+
+.payload-hero-overlay {
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+  color: white;
+  padding: 0 1rem;
+  max-width: min(100%, 1000px);
+}
+
+.payload-title {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 900;
+  font-size: clamp(2rem, 6vw, 4rem);   /* fluid text */
+  color: #ff1a1a;
+  text-transform: uppercase;
+  text-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+  line-height: 1.05;
+}
+
+.payload-subtitle {
+  font-family: "Rajdhani", sans-serif;
+  font-size: clamp(1rem, 2.8vw, 1.3rem);
+  color: #ffdddd;
+  margin-top: 0.5rem;
+  text-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+}
+
+/* Make the hero less huge on small phones, keep aspect */
+@media (max-width: 640px) {
+  .payload-hero {
+    height: auto;
+    aspect-ratio: 16 / 9;    /* stable space, no jump */
+    max-height: 65vh;
+  }
+  .payload-hero-overlay {
+    top: auto;
+    bottom: 0.75rem;
+    transform: translateX(-50%);
+    background: linear-gradient(to top, rgba(0,0,0,.55), rgba(0,0,0,0));
+    padding-bottom: 1rem;
+  }
+}
+
+/* ===== CONTENT ===== */
+.payload-content {
+  background: radial-gradient(circle at bottom, #0a0a0a 0%, #000000 80%);
+  color: #fff;
+  padding: clamp(2.5rem, 5vw, 5rem) 2rem;
+  text-align: center;
+
+  /* Defer rendering offscreen */
+  content-visibility: auto;
+  contain-intrinsic-size: 1200px;
+}
+
+.payload-story {
+  max-width: 900px;
+  margin: 0 auto 4rem;
+}
+
+.payload-story h2 {
+  font-family: "Orbitron", sans-serif;
+  color: #ff1a1a;
+  font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+  margin-bottom: 1rem;
+}
+
+.payload-story p {
+  font-family: "Rajdhani", sans-serif;
+  font-size: clamp(1rem, 2.6vw, 1.1rem);
+  color: #f0f0f0;
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+}
+
+.payload-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 0;
+  background: none !important;   /* removes the black box */
+  box-shadow: none !important;
+}
+
+/* Responsive tweaks */
+@media (max-width: 1024px) {
+  .payload-gallery img { width: 95vw; }
+}
+
+@media (max-width: 768px) {
+  .payload-gallery img { width: 98vw; }
+}
+
+/* ===== CTA ===== */
+.payload-cta {
+  margin-top: 3rem;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.payload-cta h2 {
+  font-family: "Orbitron", sans-serif;
+  color: #ff1a1a;
+  font-size: clamp(1.4rem, 4.2vw, 2.2rem);
+  margin-bottom: 1rem;
+}
+
+.payload-cta p {
+  font-family: "Rajdhani", sans-serif;
+  color: #ddd;
+  font-size: clamp(0.95rem, 2.6vw, 1.1rem);
+  margin-bottom: 1.5rem;
+}
+
+.payload-btn {
+  display: inline-block;
+  background: #ff1a1a;
+  color: white;
+  padding: 0.8rem 1.4rem;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.payload-btn:hover {
+  background: #ff3333;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+  transform: translateY(-2px);
+  color: rgb(75, 6, 106)
+}
+
+/* Additional small-screen refinement already covered above */
+/* === FIXED, PERFECTLY BALANCED PAYLOAD BUTTON === */
+.payload-btn {
+  display: inline-flex;                /* centers text vertically */
+  align-items: center;
+  justify-content: center;
+  background: #ff1a1a;
+  color: #fff;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.55rem 1.3rem;             /* balanced top/bottom padding */
+  border-radius: 6px;
+  border: none;
+  text-decoration: none;
+  line-height: 1;                      /* fixes the “fat” bottom look */
+  height: 36px;                        /* consistent vertical balance */
+  min-width: 140px;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.payload-btn:hover {
+  background: #ff3333;
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+/* === MOBILE SIZE === */
+@media (max-width: 768px) {
+  .payload-btn {
+    font-size: 0.85rem;
+    padding: 0.4rem 1rem;
+    height: 32px;
+    min-width: 120px;
+    border-radius: 5px;
+  }
+}
+
+/* === LARGE DESKTOP SIZE === */
+@media (min-width: 1400px) {
+  .payload-btn {
+    font-size: 1.1rem;
+    padding: 0.65rem 1.6rem;
+    height: 40px;
+    border-radius: 8px;
+    min-width: 160px;
+  }
+}
+
+/* === 4K ULTRA-WIDE POLISH === */
+@media (min-width: 1800px) {
+  .payload-btn {
+    font-size: 1.25rem;
+    padding: 0.75rem 1.8rem;
+    height: 44px;
+    border-radius: 10px;
+    min-width: 180px;
+  }
+}

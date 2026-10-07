@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Rajdhani:wght@500;600&display=swap');
+
+/* ===== CONTACT SECTION ===== */
+.contact-section {
+  background-color: #0b0b0b;
+  color: #fff;
+  text-align: center;
+  padding: 6rem 2rem;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle gradient glow behind content */
+.contact-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(255, 0, 0, 0.08), transparent 70%);
+  pointer-events: none;
+}
+
+/* ===== TITLE ===== */
+.contact-title {
+  font-family: "Orbitron", sans-serif;
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  color: #ff1a1a;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+}
+
+.contact-intro {
+  font-family: "Rajdhani", sans-serif;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  color: #ccc;
+  max-width: 700px;
+  margin: 0 auto 4rem;
+  line-height: 1.6;
+}
+
+/* ===== GRID ===== */
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== CARD ===== */
+.contact-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 2.5rem 2rem;
+  width: 320px;
+  text-align: center;
+  transition: all 0.35s ease;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 rgba(255, 0, 0, 0);
+  transform: translateY(40px);
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.contact-card:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.contact-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.contact-card:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-6px);
+  border-color: #e60000;
+  box-shadow: 0 0 20px rgba(230, 0, 0, 0.3);
+}
+
+/* ===== CARD TEXT ===== */
+.contact-card h2 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.8rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #e60000;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+.contact-card p {
+  font-family: "Rajdhani", sans-serif;
+  color: #dddddd;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+/* ===== BUTTON ===== */
+.contact-btn {
+  display: inline-block;
+  background: #e60000;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: "Rajdhani", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: #ff1a1a;
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+}
+
+/* ===== FADE IN ANIMATION ===== */
+@keyframes fadeInUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .contact-section {
+    padding: 5rem 1.5rem;
+  }
+  .contact-card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .contact-card {
+    width: 92%;
+    padding: 2rem 1.5rem;
+  }
+  .contact-card h2 {
+    font-size: 1.5rem;
+  }
+  .contact-card p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 3rem 1rem;
+  }
+  .contact-card {
+    width: 100%;
+  }
+  .contact-title {
+    font-size: 1.8rem;
+  }
+  .contact-intro {
+    font-size: 0.95rem;
+  }
+}
+/* === ULTRA-CLEAN MOBILE FIX === */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 9rem 0 4rem 0 !important;  /* clears navbar */
+  }
+
+  .contact-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+  }
+
+  .contact-card {
+    width: 88%;
+    max-width: 360px;
+    margin: 1.8rem auto;
+    text-align: center;
+    position: relative;
+    left: -4px; /* small optical center nudge */
+  }
+
+  /* Slim text & spacing */
+  .contact-card h2 {
+    font-size: 1.4rem;
+  }
+
+  .contact-card p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  /* TRUE FIX: perfectly balanced button */
+  .contact-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.35rem 0.9rem !important;  /* smaller top/bottom padding */
+    font-size: 0.85rem !important;
+    font-weight: 600;
+    border-radius: 5px !important;
+    line-height: 1;                      /* removes “tall” text baseline gap */
+    height: 32px;                        /* fixes visual bottom fatness */
+    min-width: 115px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section {
+    padding-top: 10rem !important;
+  }
+
+  .contact-card {
+    width: 90%;
+    left: -6px;
+  }
+
+  .contact-btn {
+    padding: 0.3rem 0.8rem !important;
+    font-size: 0.8rem !important;
+    height: 30px;
+  }
+}
+/* ===== LARGE SCREEN POLISH FOR CONTACT PAGE ===== */
+@media (min-width: 1400px) {
+  .contact-section {
+    padding: 8rem 10% 6rem 10%;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+
+  .contact-title {
+    font-size: 3.2rem;
+    letter-spacing: 1px;
+  }
+
+  .contact-intro {
+    font-size: 1.25rem;
+    max-width: 1000px;
+    line-height: 1.75;
+  }
+
+  .contact-grid {
+    gap: 3rem;
+    justify-content: center;
+  }
+
+  .contact-card {
+    width: 360px;
+    padding: 3rem 2.5rem;
+    border-radius: 18px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .contact-card h2 {
+    font-size: 1.9rem;
+  }
+
+  .contact-card p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  .contact-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.45rem 1.2rem !important;
+    font-size: 1rem !important;
+    font-weight: 600;
+    height: 36px;
+    border-radius: 6px !important;
+    min-width: 140px;
+    transition: all 0.25s ease;
+  }
+
+  .contact-btn:hover {
+    transform: translateY(-2px);
+    background: #ff1a1a;
+  }
+}
+
+/* ===== 4K+ ULTRA WIDE POLISH ===== */
+@media (min-width: 1800px) {
+  .contact-section {
+    max-width: 1800px;
+  }
+
+  .contact-grid {
+    gap: 3.5rem;
+  }
+
+  .contact-card {
+    width: 400px;
+    padding: 3.2rem 2.6rem;
+  }
+
+  .contact-card h2 {
+    font-size: 2rem;
+  }
+
+  .contact-card p {
+    font-size: 1.1rem;
+  }
+
+  .contact-btn {
+    font-size: 1.05rem !important;
+    padding: 0.5rem 1.4rem !important;
+    height: 38px;
+  }
+}
+

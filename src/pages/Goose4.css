@@ -1,0 +1,572 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Rajdhani:wght@600&display=swap');
+
+/* ===== HERO ===== */
+.goose4-hero {
+  position: relative;
+  height: 85vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.goose4-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 45%;
+  filter: brightness(0.8) contrast(1.1) saturate(1.05); /* balanced tones */
+  z-index: 0;
+}
+
+.goose4-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.55) 60%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+  z-index: 1;
+}
+
+/* Centered overlay text */
+.goose4-hero-overlay {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  padding: 1rem;
+  width: 100%;
+  z-index: 2;
+}
+
+.goose4-title {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 900;
+  font-size: 4rem;
+  color: #ff1a1a;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: 0 0 20px rgba(255, 0, 0, 0.9), 0 0 50px rgba(255, 0, 0, 0.5);
+  margin-bottom: 0.8rem;
+}
+
+.goose4-subtitle {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.3rem;
+  color: #fff;
+  opacity: 0.9;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+}
+
+/* ===== ROCKET SECTION ===== */
+.rocket-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  padding: 4rem 0;
+  border-top: 2px solid #111;
+  border-bottom: 2px solid #111;
+}
+
+.rocket-image {
+  width: 85%;
+  max-width: 1100px;
+  display: block;
+  border-radius: 10px;
+}
+
+/* ===== HOTSPOTS ===== */
+.hotspot {
+  position: absolute;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+}
+
+.dot {
+  width: 18px;
+  height: 18px;
+  background: #ff1a1a;
+  border-radius: 50%;
+  box-shadow: 0 0 18px rgba(255, 0, 0, 0.9);
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.dot:hover {
+  transform: scale(1.4);
+  background: #ff4d4d;
+}
+
+/* ===== INFO BOX ===== */
+.info-box {
+  margin: 3rem auto 6rem;
+  background: linear-gradient(145deg, #111, #1a1a1a);
+  border: 1px solid #ff1a1a;
+  color: white;
+  padding: 2rem;
+  max-width: 750px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.3);
+  animation: fadeIn 0.3s ease;
+  z-index: 5;
+}
+
+.info-box h2 {
+  font-family: "Orbitron", sans-serif;
+  color: #ff3333;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.info-box p {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.1rem;
+  color: #f2f2f2;
+  line-height: 1.6;
+}
+
+.info-box button {
+  margin-top: 1.2rem;
+  background: #ff1a1a;
+  border: none;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  font-family: "Rajdhani", sans-serif;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.25s ease;
+}
+
+.info-box button:hover {
+  background: #ff3333;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== GALLERY SECTION ===== */
+.goose4-gallery-section {
+  background: radial-gradient(circle at bottom, #0a0a0a 0%, #000000 80%);
+  color: #fff;
+  text-align: center;
+  padding: 5rem 2rem 7rem;
+}
+
+.goose4-gallery-section h2 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2.4rem;
+  color: #ff1a1a;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 0 0 18px rgba(255, 0, 0, 0.7);
+}
+
+/* GRID layout instead of flex */
+.goose4-gallery {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: start; /* keep rows tidy */
+}
+
+/* Fully responsive tiles */
+.goose4-gallery img {
+  width: 100%;
+  height: auto;              /* let height be driven by aspect-ratio */
+  aspect-ratio: 3 / 2;       /* consistent card shape */
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.goose4-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
+  filter: brightness(1.1);
+}
+
+/* Optional: slightly larger cards on wider screens */
+@media (min-width: 1200px) {
+  .goose4-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    max-width: 1200px;
+  }
+}
+
+.goose4-story-section {
+  background: radial-gradient(circle at bottom, #0a0a0a 0%, #000000 90%);
+  color: #ffffff;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.story-content {
+  max-width: 900px;
+  margin: 0 auto 4rem auto;
+}
+
+.story-content h2 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2.8rem;
+  color: #ff1a1a; /* changed from blue to red */
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+}
+
+.story-content p {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #f2f2f2; /* changed from pale blue to neutral white-gray */
+}
+
+/* ===== VIDEO SECTION ===== */
+.video-section {
+  text-align: center;
+  width: 100%;
+  max-width: 1400px;
+  margin: 4rem auto 7rem auto;
+}
+
+.video-section h2 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2.4rem;
+  color: #ff1a1a; /* red accent instead of blue */
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 18px rgba(255, 0, 0, 0.6);
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 540px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 40px rgba(255, 0, 0, 0.3); /* red glow */
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 14px;
+}
+
+/* Responsive scaling */
+@media (max-width: 1024px) {
+  .video-wrapper {
+    height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .video-wrapper {
+    height: 380px;
+  }
+
+  .story-content h2 {
+    font-size: 2rem;
+  }
+
+  .story-content p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .rocket-image {
+    width: 100%;
+  }
+  .rocket-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .info-box {
+    width: 90%;
+    margin: 2rem auto;
+  }
+  .goose4-gallery {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .goose4-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+/* Container just centers the stage; no sizing here */
+.rocket-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  padding: 4rem 0;
+  border-top: 2px solid #111;
+  border-bottom: 2px solid #111;
+}
+
+/* NEW: stage matches the image’s box exactly */
+.rocket-stage {
+  position: relative;
+  width: min(90vw, 1100px);   /* same max as your image */
+  display: inline-block;      /* shrink-wrap to content */
+}
+
+/* Image fills the stage exactly (no extra margins/padding) */
+.rocket-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Hotspots are now absolute *inside* the stage (i.e., over the image) */
+.hotspot {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background: none;
+}
+
+/* Dot visuals */
+.dot {
+  width: 18px;
+  height: 18px;
+  background: #ff1a1a;
+  border-radius: 50%;
+  box-shadow: 0 0 18px rgba(255, 0, 0, 0.9);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.hotspot:hover .dot {
+  transform: scale(1.25);
+  background: #ff4d4d;
+}
+
+/* Mobile scaling so dots don’t feel chunky */
+@media (max-width: 768px) {
+  .rocket-stage { width: 94vw; } /* a touch wider on small screens */
+  .dot { width: 14px; height: 14px; }
+}
+
+/* Big screens: give the image a little more presence; positions still correct */
+@media (min-width: 1400px) {
+  .rocket-stage { width: 1200px; } /* optional; keeps % coordinates accurate */
+  .dot { width: 20px; height: 20px; }
+}
+/* ===============================
+   FIXED RESPONSIVE ROCKET SECTION
+   =============================== */
+
+/* Centers entire rocket stage */
+.rocket-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  padding: 4rem 0;
+  border-top: 2px solid #111;
+  border-bottom: 2px solid #111;
+  overflow-x: hidden;
+}
+
+/* Inner stage matches image width exactly */
+.rocket-stage {
+  position: relative;
+  width: min(90vw, 1100px);
+  display: inline-block;
+}
+
+/* Rocket image sets the coordinate space */
+.rocket-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Dots are now positioned perfectly over the image */
+.hotspot {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.dot {
+  width: 18px;
+  height: 18px;
+  background: #ff1a1a;
+  border-radius: 50%;
+  box-shadow: 0 0 18px rgba(255, 0, 0, 0.9);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.hotspot:hover .dot {
+  transform: scale(1.25);
+  background: #ff4d4d;
+}
+
+/* Mobile: smaller dots and tighter width */
+@media (max-width: 768px) {
+  .rocket-stage { width: 94vw; }
+  .dot { width: 14px; height: 14px; }
+}
+
+/* Big screen: larger image and dots */
+@media (min-width: 1400px) {
+  .rocket-stage { width: 1200px; }
+  .dot { width: 20px; height: 20px; }
+}
+/* ===== ROCKET SECTION FIX ===== */
+.rocket-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  padding: 4rem 0;
+  border-top: 2px solid #111;
+  border-bottom: 2px solid #111;
+  overflow-x: hidden;
+}
+
+.rocket-stage {
+  position: relative;
+  width: min(90vw, 1100px);
+  display: inline-block;
+}
+
+.rocket-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Perfectly calibrated hotspots */
+.hotspot {
+  position: absolute;
+  top: var(--y);
+  left: calc(var(--x) + 1.5%);
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.dot {
+  width: 18px;
+  height: 18px;
+  background: #ff1a1a;
+  border-radius: 50%;
+  box-shadow: 0 0 18px rgba(255, 0, 0, 0.9);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.hotspot:hover .dot {
+  transform: scale(1.25);
+  background: #ff4d4d;
+}
+
+/* Mobile: slightly smaller dots */
+@media (max-width: 768px) {
+  .rocket-stage { width: 94vw; }
+  .dot { width: 14px; height: 14px; }
+}
+
+/* Larger screens */
+@media (min-width: 1400px) {
+  .rocket-stage { width: 1200px; }
+  .dot { width: 20px; height: 20px; }
+}
+/* === ROCKET HOTSPOT PATCH (append only) === */
+.rocket-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  padding: 4rem 0;
+  border-top: 2px solid #111;
+  border-bottom: 2px solid #111;
+  overflow-x: hidden;
+}
+
+.rocket-stage {
+  position: relative;
+  width: min(90vw, 1100px);   /* tracks image width */
+  display: inline-block;
+}
+
+.rocket-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.hotspot {
+  position: absolute;
+  top: var(--y);
+  left: var(--x);
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.dot {
+  width: 18px;
+  height: 18px;
+  background: #ff1a1a;
+  border-radius: 50%;
+  box-shadow: 0 0 18px rgba(255, 0, 0, 0.9);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.hotspot:hover .dot {
+  transform: scale(1.25);
+  background: #ff4d4d;
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+  .rocket-stage { width: 94vw; }
+  .dot { width: 14px; height: 14px; }
+}
+

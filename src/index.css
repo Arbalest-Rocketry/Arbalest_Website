@@ -1,0 +1,218 @@
+/* Tomorrow (SIL Open Font License). Font files live in public/fonts/ */
+@font-face {
+  font-family: "Tomorrow";
+  src: url("/fonts/Tomorrow-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Tomorrow";
+  src: url("/fonts/Tomorrow-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Tomorrow";
+  src: url("/fonts/Tomorrow-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Tomorrow";
+  src: url("/fonts/Tomorrow-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  display: block;        /* remove any flex/grid that might be limiting width */
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+
+
+body {
+  padding: 0;
+  background-color: #111;
+  color: white;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+
+#root {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  text-align: initial; /* or keep center if you really want */
+}
+
+
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+body {
+  margin: 0;
+  padding-top: 4rem; /* matches navbar height */
+  background-color: #111;
+  color: white;
+}
+html, body, #root { width:100%; height:100%; margin:0; padding:0; overflow-x:hidden; }
+#root, .App, .app, main, .container { max-width:none !important; margin:0 !important; padding:0 !important; }
+
+/* ===== Global Mobile Improvements ===== */
+:root {
+  --space-x: clamp(12px, 4vw, 32px);
+  --title: clamp(1.6rem, 4vw, 3rem);
+  --subtitle: clamp(1rem, 2.6vw, 1.25rem);
+}
+
+/* Universal image scaling */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Consistent section padding */
+section {
+  padding-left: var(--space-x);
+  padding-right: var(--space-x);
+}
+
+/* Typography scaling */
+h1, .goose4-title, .payload-title {
+  font-size: var(--title);
+  line-height: 1.1;
+}
+.goose4-subtitle, .payload-subtitle {
+  font-size: var(--subtitle);
+}
+
+/* Fix layout overflow issues */
+body {
+  overflow-x: hidden;
+}
+
+/* Button tap targets */
+button, a {
+  min-height: 44px;
+  padding: 0.6rem 1.2rem;
+}
+
+/* Video wrappers auto-scale */
+.video-wrapper {
+  aspect-ratio: 16 / 9;
+  height: auto !important;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden; /* prevent sideways scroll */
+}
+
+/* Firefox */
+html {
+  scrollbar-width: none;
+}
+
+/* IE / old Edge */
+body {
+  -ms-overflow-style: none;
+}
+
+/* Chrome / Safari / Edge */
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* Hide scrollbars globally but keep scrolling */
+html, body, #root {
+  height: 100%;
+}
+
+/* Firefox */
+html, body, #root, * {
+  scrollbar-width: none;
+}
+
+/* IE/old Edge */
+body, #root {
+  -ms-overflow-style: none;
+}
+
+/* Chrome/Safari/Edge */
+*::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+}
+*::-webkit-scrollbar-thumb {
+  background: transparent !important;
+}
+
+

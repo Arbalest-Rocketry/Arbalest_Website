@@ -1,0 +1,46 @@
+/* ===== HERO (safe, self-contained) ===== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  z-index: 1;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 5rem;
+
+  /* Background image + overlay in one place (no pseudo-elements) */
+  background:
+    linear-gradient(rgba(0,0,0,0.30), rgba(0,0,0,0.30)),
+    /* use modern formats if you have them; otherwise JPG only */
+    image-set(
+      url("/background.webp") type("image/jpeg")
+    );
+  background-position: center bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  /* Parallax-like effect without pseudo-elements */
+  background-attachment: fixed; /* if iOS jitter, remove this line */
+}
+
+/* HERO CONTENT */
+.hero-content {
+  color: #fff;
+  max-width: 900px;
+  padding: 2rem;
+  backdrop-filter: blur(0.2px);
+}
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+.hero-content p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 1rem;
+  border-radius: 8px;
+}

@@ -1,0 +1,105 @@
+.rocket-page {
+  background-color: #000;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+/* HERO */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.hero-title {
+  font-size: 5rem;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+.hero-subtitle {
+  font-size: 2rem;
+  font-style: italic;
+  color: #f04c2f;
+}
+
+/* STORY */
+.story-section {
+  max-width: 900px;
+  margin: 5rem auto;
+  text-align: center;
+  line-height: 1.8;
+  font-size: 1.2rem;
+}
+
+/* SPECS */
+.specs-section {
+  padding: 4rem 10%;
+  background-color: #111;
+  text-align: center;
+}
+.specs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.spec-item {
+  background-color: #1b1b1b;
+  padding: 1.5rem;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+.spec-item:hover {
+  transform: translateY(-5px);
+}
+.spec-item h4 {
+  color: #f04c2f;
+}
+
+/* GALLERY */
+.gallery-section {
+  padding: 4rem 10%;
+  text-align: center;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.gallery-grid img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* REFLECTION */
+.reflection-section {
+  max-width: 900px;
+  margin: 5rem auto;
+  text-align: center;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  padding: 0 2rem;
+}
+.reflection-section h2 {
+  color: #f04c2f;
+  margin-bottom: 1rem;
+}
