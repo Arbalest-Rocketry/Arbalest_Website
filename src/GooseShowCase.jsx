@@ -1,7 +1,23 @@
 import "./GooseShowCase.css";
 import { Link } from "react-router-dom";
 
-const rockets = [
+export const rockets = [
+  {
+    name: "Moose 1",
+    year: "Launch Canada 2027 · Upcoming",
+    desc: "Our first ever liquid engine rocket, Moose 1 is set to compete at Launch Canada 2027",
+    awards: [],
+    img: null,
+    link: null,
+  },
+  {
+    name: "Red Robin",
+    year: "2026",
+    desc: "Description coming soon.",
+    awards: [],
+    img: null,
+    link: null,
+  },
   {
     name: "Goose IV",
     year: "2025 Launch Canada",
@@ -41,7 +57,7 @@ export default function GooseShowcase() {
             <h1>{rocket.name}</h1>
             <p>{rocket.desc}</p>
 
-            {rocket.awards.length > 0 && (
+            {rocket.awards.filter(Boolean).length > 0 && (
               <ul>
                 {rocket.awards.map((award, i) => (
                   <li key={i}>{award}</li>
@@ -49,13 +65,19 @@ export default function GooseShowcase() {
               </ul>
             )}
 
-            <Link to={rocket.link}>
-              <button className="learn-more">Learn More</button>
-            </Link>
+            {rocket.link && (
+              <Link to={rocket.link}>
+                <button className="learn-more">Learn More</button>
+              </Link>
+            )}
           </div>
 
           <div className="goose-image">
-            <img src={rocket.img} alt={rocket.name} />
+            {rocket.img ? (
+              <img src={rocket.img} alt={rocket.name} />
+            ) : (
+              <div className="goose-image-placeholder">Image coming soon</div>
+            )}
           </div>
         </section>
       ))}

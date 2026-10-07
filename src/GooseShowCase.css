@@ -17,17 +17,17 @@
 }
 
 /* SECTION COLORS */
-.goose-section:nth-child(1) {
+.goose-section:nth-child(3n+1) {
   background: linear-gradient(135deg, #000000, #0a0a0a); /* sleek black */
   color: #ffffff;
 }
 
-.goose-section:nth-child(2) {
+.goose-section:nth-child(3n+2) {
   background: linear-gradient(135deg, #7a0000, #b00000); /* rich red */
   color: #ffffff;
 }
 
-.goose-section:nth-child(3) {
+.goose-section:nth-child(3n) {
   background: linear-gradient(135deg, #f4f4f4, #e9e9e9); /* soft white */
   color: #111;
 }
@@ -100,18 +100,18 @@
 }
 
 /* Button variant for the light section */
-.goose-section:nth-child(3) .learn-more {
+.goose-section:nth-child(3n) .learn-more {
   background: #111;
   color: white;
 }
 
-.goose-section:nth-child(3) .learn-more:hover {
+.goose-section:nth-child(3n) .learn-more:hover {
   background: transparent;
   color: #111;
   border-color: #111;
 }
 
-.goose-section:nth-child(2) .goose-image img {
+.goose-section:nth-child(3n+2) .goose-image img {
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
 }
 /* ===== MOBILE & TABLET FIX ===== */
@@ -188,7 +188,22 @@
 
 
 /* Text variant for section 2 */
-.goose-section:nth-child(2) .goose-text h4 {
+.goose-section:nth-child(3n+2) .goose-text h4 {
   color: #fd6060;
 }
 
+
+/* Placeholder for rockets without a photo yet */
+.goose-image-placeholder {
+  width: min(500px, 90vw);
+  aspect-ratio: 4 / 3;
+  display: grid;
+  place-items: center;
+  border: 2px dashed currentColor;
+  border-radius: 10px;
+  opacity: 0.6;
+  font-family: "Tomorrow", system-ui, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}

@@ -44,3 +44,61 @@
   padding: 1rem;
   border-radius: 8px;
 }
+
+/* ===== LAUNCH CANADA COUNTDOWN ===== */
+.countdown {
+  margin-top: 1.5rem;
+  font-family: "Tomorrow", system-ui, Helvetica, Arial, sans-serif;
+}
+
+.countdown-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ff2b2b;
+  margin: 0 0 0.75rem;
+}
+
+.countdown-units {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.countdown-unit {
+  min-width: 80px;
+  padding: 0.6rem 0.5rem;
+  background: rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255, 43, 43, 0.6);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countdown-value {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+
+.countdown-label {
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+  .countdown-units {
+    gap: 0.4rem;
+  }
+  .countdown-unit {
+    min-width: 64px;
+  }
+  .countdown-value {
+    font-size: 1.5rem;
+  }
+}

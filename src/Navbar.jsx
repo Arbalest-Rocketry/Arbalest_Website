@@ -68,9 +68,9 @@ export default function Navbar() {
 
         {/* Desktop nav */}
         <ul className="nav-links">
-          <li><Link to="/" onClick={closeMenu}>Home</Link></li>
+          <li><Link to="/about" onClick={closeMenu}>About</Link></li>
           <li><Link to="/subteams" onClick={closeMenu}>Subteams</Link></li>
-          <li><Link to="/payload" onClick={closeMenu}>Payload Challenge</Link></li>
+          <li><Link to="/rockets" onClick={closeMenu}>Rockets</Link></li>
           <li><Link to="/members" onClick={closeMenu}>Members</Link></li>
           <li><Link to="/sponsorships" onClick={closeMenu}>Sponsorships</Link></li>
           <li><Link to="/contact" onClick={closeMenu}>Contact</Link></li>
@@ -81,9 +81,9 @@ export default function Navbar() {
       {/* Mobile overlay menu */}
       <div id="mobile-menu" className={`mobile-menu ${menuOpen ? "show" : ""}`}>
         {[
-          ["Home", "/"],
+          ["About", "/about"],
           ["Subteams", "/subteams"],
-          ["Payload", "/payload"],
+          ["Rockets", "/rockets"],
           ["Members", "/members"],
           ["Sponsorships", "/sponsorships"],
           ["Contact", "/contact"],
