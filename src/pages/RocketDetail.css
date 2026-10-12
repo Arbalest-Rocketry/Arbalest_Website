@@ -1,0 +1,123 @@
+/* ===== HERO ===== */
+.rp-hero {
+  position: relative;
+  height: 70vh;
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+}
+
+.rp-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+  display: block;
+}
+
+.rp-hero-placeholder {
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle at 50% 110%, rgba(230, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0) 60%),
+    linear-gradient(180deg, #0b0b0b 0%, #000 100%);
+}
+
+.rp-hero-overlay {
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  width: min(100% - 2rem, 900px);
+  text-align: center;
+  color: #fff;
+}
+
+.rp-tag {
+  font-family: "Tomorrow", system-ui, Helvetica, Arial, sans-serif;
+  color: #ff4d4d;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0 0 0.5rem;
+}
+
+.rp-title {
+  font-family: "Tomorrow", system-ui, Helvetica, Arial, sans-serif;
+  font-size: clamp(2.6rem, 8vw, 5rem);
+  font-weight: 800;
+  color: #e60000;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 0;
+}
+
+.rp-subtitle {
+  font-family: "Satoshi", system-ui, Helvetica, Arial, sans-serif;
+  font-size: clamp(1rem, 2.4vw, 1.25rem);
+  color: #eee;
+  margin: 0.75rem 0 0;
+}
+
+/* ===== CONTENT ===== */
+.rp-content {
+  background: #000;
+  color: #fff;
+  padding: clamp(3rem, 6vw, 5rem) 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(3rem, 6vw, 4.5rem);
+}
+
+.rp-content h2 {
+  font-family: "Tomorrow", system-ui, Helvetica, Arial, sans-serif;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 800;
+  color: #e60000;
+  margin: 0 0 1rem;
+}
+
+.rp-story,
+.rp-gallery-section {
+  width: min(100%, 850px);
+  text-align: center;
+}
+
+.rp-story p {
+  font-family: "Satoshi", system-ui, Helvetica, Arial, sans-serif;
+  font-size: clamp(1rem, 2.2vw, 1.1rem);
+  line-height: 1.7;
+  color: #ddd;
+  margin: 0 0 1rem;
+}
+
+.rp-story .rp-soon {
+  color: #888;
+}
+
+.rp-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.rp-gallery img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.rp-gallery-placeholder {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 7;
+  border: 2px dashed rgba(255, 255, 255, 0.35);
+  border-radius: 12px;
+  color: #888;
+  font-family: "Tomorrow", system-ui, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}

@@ -12,6 +12,7 @@ import ContactPage from "./pages/ContactPage";
 import DonationsPage from "./pages/DonationsPage";
 import RocketsPage from "./pages/RocketsPage";
 import AboutPage from "./pages/AboutPage";
+import RocketDetailPage from "./pages/RocketDetailPage";
 
 // Start every page at the top instead of keeping the last page's scroll position.
 // The page can scroll on the window, body or #root depending on the CSS, so reset all three.
@@ -44,6 +45,8 @@ export default function App() {
         <Route path="/goose2" element={<Goose2Page />} />
         <Route path="/goose3" element={<Goose3Page />} />
         <Route path="/goose4" element={<Goose4Page />} />
+        <Route path="/moose1" element={<RocketDetailPage id="moose1" />} />
+        <Route path="/redrobin" element={<RocketDetailPage id="redrobin" />} />
       </Routes>
     </>
   );

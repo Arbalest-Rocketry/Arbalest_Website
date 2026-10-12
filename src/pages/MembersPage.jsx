@@ -10,8 +10,8 @@ const president = {
   name: "Erik Das",
   role: "President",
   img: "/members/ErikDas.webp",
-  bio: "Hello My name is Erik and I am the president of Arbalest Rocketry. I am currently a second year Space Engineering student at Lassonde. As president I oversee all operations and lead the team. When I am not building rockets you can catch me on Slime Rancher (1500+ hours btw).",
-  email: "Erik@gmail.com",
+  bio: "As President of Arbalest Rocketry, Erik leads a multidisciplinary engineering team pushing the boundaries of collegiate aerospace at York University. In this role, he directs team communications across university administration, industry sponsors, and the broader public. In addition, he oversees technical milestones, operational logistics, and team recruitment, ensuring members have the resources and mentorship needed to design, build, and fly rockets at Launch Canada.",
+  email: "erik2007das@gmail.com",
 };
 
 const teamMembers = [
@@ -19,127 +19,127 @@ const teamMembers = [
     name: "Izabel Werocy",
     role: "Vice President",
     img: "/members/IzabelWerocy.webp",
-    bio: "Hi, my name is Izabel and I am the Vice President of Arbalest Rocketry. Full bio coming soon.",
-    email: "izabel@example.com",
+    bio: "Second-year Space Engineering student at York University and Vice President of Arbalest Rocketry, working on fluid design for the liquid rocket.",
+    email: "izaw@my.yorku.ca",
   },
   {
     name: "David Abeziz",
     role: "Payload Electrical Lead",
     img: "/members/DavidAbeziz.webp",
-    bio: "Hi, my name is David and I am the Payload Electrical Lead at Arbalest Rocketry. Full bio coming soon.",
-    email: "david@example.com",
+    bio: "I'm a 5th-year Space Engineering student at YorkU, and I'm the Payload Electrical Team lead this year! I enjoy working with electronics and designing things! I also love Space and Astronomy 🚀, sci-fi, Superheroes, and Music (I take a break from work-related stress and replace it with violin practice 🎻 stress 🤦‍♂️)",
+    email: "david.abeziz4@gmail.com",
   },
   {
     name: "Hussain Almilli",
-    role: "Fluid Systems Lead",
+    role: "Treasurer / Fluid Systems Lead",
     img: "/members/HussainAlmilli.webp",
-    bio: "Hi, my name is Hussain and I am the Fluid Systems Lead at Arbalest Rocketry. Full bio coming soon.",
-    email: "hussain@example.com",
+    bio: "I’m a second year mechanical engineer at York. At Arbalest I work on injector design, ground station equipment, and assist with propellant plumbing.",
+    email: "hussainalmilliuni@gmail.com",
   },
   {
     name: "Ivor Anand",
     role: "Launch Tower Lead",
     img: "/members/IvorAnand.webp",
-    bio: "Hi, my name is Ivor and I am the Launch Tower Lead at Arbalest Rocketry. Full bio coming soon.",
-    email: "ivor@example.com",
+    bio: "Fueled by pelmeni and questionable engineering decisions",
+    email: "ivor15@my.yorku.ca",
   },
   {
     name: "Sanjana Bhatt",
     role: "Test Stand Lead",
     img: "/members/SanjanaBhatt.webp",
-    bio: "Hi, my name is Sanjana and I am the Test Stand Lead at Arbalest Rocketry. Full bio coming soon.",
-    email: "sanjana@example.com",
+    bio: "Sanjana is a third year in mechanical engineering. Her role in Arbalest Rocketry is designing and manufacturing a liquid engine test stand, as well as mentoring members who are interested in the same project or similar.",
+    email: "sanjqna@my.yorku.ca",
   },
   {
     name: "Jordan Birley",
     role: "Propulsion Lead",
     img: "/members/JordanBirley.webp",
-    bio: "Hi, my name is Jordan and I am the Propulsion Lead at Arbalest Rocketry. Full bio coming soon.",
-    email: "jordan@example.com",
+    bio: "",
+    email: "",
   },
   {
     name: "Michael Chu",
     role: "Imaging Lead",
     img: "/members/MichaelChu.webp",
-    bio: "Hi, my name is Michael and I am the Imaging Lead at Arbalest Rocketry. Full bio coming soon.",
-    email: "michael@example.com",
+    bio: "Hi, I eat dirt",
+    email: "michaelchu023507@gmail.com",
   },
   {
     name: "Iltebir Danwar",
     role: "Vehicle Integration Lead",
     img: "/members/IltebirDanwar.webp",
-    bio: "Hi, my name is Iltebir and I am the Vehicle Integration Lead at Arbalest Rocketry. Full bio coming soon.",
-    email: "iltebir@example.com",
+    bio: "Second year space engineering student, leading the development of the electronics for the propulsion and the plumbing system.",
+    email: "iltebir.danwar1@gmail.com",
   },
   {
     name: "Ronik Jagdev",
     role: "Aerostructure Lead",
     img: "/members/RonikJagdev.webp",
-    bio: "Hi, my name is Ronik and I am the Aerostructure Lead at Arbalest Rocketry. Full bio coming soon.",
-    email: "ronik@example.com",
+    bio: "I love the both the theoretical and technical parts of engineering. Working on active control systems, mechanical design, and metal manufacturing. I enjoy making personal projects and components on the lathe 🙂",
+    email: "ronik.jagdev@gmail.com",
   },
   {
     name: "Georgii Lavreniuk",
     role: "Ground Station Lead",
     img: "/members/GeorgiiLavreniuk.webp",
-    bio: "Hi, my name is Georgii and I am the Ground Station Lead at Arbalest Rocketry. Full bio coming soon.",
-    email: "georgii@example.com",
+    bio: "In this world anything can be an antenna, I just make sure the ones we design and make are useful.",
+    email: "georgiilavreniuk13@gmail.com",
   },
   {
     name: "Moiza Mahmood",
     role: "Business Lead",
     img: "/members/MoizaMahmood.webp",
-    bio: "Hi, my name is Moiza and I am the Business Lead at Arbalest Rocketry. Full bio coming soon.",
-    email: "moiza@example.com",
+    bio: "",
+    email: "",
   },
   {
     name: "Seyed Masoumi Lari",
     role: "Payload Science Lead",
     img: "/members/SeyedMasoumiLari.webp",
-    bio: "Hi, my name is Seyed and I am the Payload Science Lead at Arbalest Rocketry. Full bio coming soon.",
-    email: "seyed@example.com",
+    bio: "I am the payload lead for Arbalest. My job is to design and execute scientific experiments in collaboration with various labs at York University. Most recently, me and my team made a scientific discovery onboard the Red Robin rocket!",
+    email: "seyedml@my.yorku.ca",
   },
   {
     name: "Nathan Minuk",
     role: "Payload Engineering Lead",
     img: "/members/NathanMinuk.webp",
-    bio: "Hi, my name is Nathan and I am the Payload Engineering Lead at Arbalest Rocketry. Full bio coming soon.",
-    email: "nathan@example.com",
+    bio: "To introduce myself my name is Nathan I am the current payload lead on Arbalest. My role entails ensuring the payload project runs on time, delegating tasks to payload members and overseeing the overall design for the payload.",
+    email: "minuknathan@gmail.com",
   },
   {
     name: "Mihir Patel",
     role: "Chief Design Officer",
     img: "/members/MihirPatel.webp",
-    bio: "Hi, my name is Mihir and I am the Chief Design Officer at Arbalest Rocketry. Full bio coming soon.",
-    email: "mihir@example.com",
+    bio: "",
+    email: "",
   },
   {
     name: "Tom Pham",
     role: "Avionics Lead",
     img: "/members/TomPham.webp",
-    bio: "Hi, my name is Tom and I am the Avionics Lead at Arbalest Rocketry. Full bio coming soon.",
-    email: "tom@example.com",
+    bio: "He's Arbalest Rocketry Avionics Lead, working on PCBs, avionic structures, and firmware. He also undergraduate research student with research in navigation system. He also York university badminton varsity team player. Hella aura!!!! 676767",
+    email: "thachtommy2005@gmail.com",
   },
   {
     name: "Ido Shakarghi",
     role: "Payload Software Lead",
     img: "/members/IdoShakarghi.webp",
-    bio: "Hi, my name is Ido and I am the Payload Software Lead at Arbalest Rocketry. Full bio coming soon.",
-    email: "ido@example.com",
+    bio: "",
+    email: "",
   },
   {
     name: "Gavin Virdee",
     role: "Composite Lead",
     img: "/members/GavinVirdee.webp",
-    bio: "Hi, my name is Gavin and I am the Composite Lead at Arbalest Rocketry. Full bio coming soon.",
-    email: "gavin@example.com",
+    bio: "Gavin Virdee is a Mechatronics Engineering student at York University and the Composites Lead for Arbalest Rocketry. In this role, he oversees the design, analysis, and fabrication of the rocket's lightweight composite structures. Leveraging his experience with SolidWorks and hands-on machining, Gavin ensures that all composite components, from the airframe to the aerodynamic surfaces, are optimized for structural integrity during high-altitude flights. After graduation, he plans to apply his manufacturing expertise to large-scale operations in the commercial vehicle body-building industry.",
+    email: "gvirdeee@gmail.com",
   },
   {
     name: "Jose Zambrano Lopez",
     role: "Ground Station Lead",
     img: "/members/JoseZambranoLopez.webp",
-    bio: "Hi, my name is Jose and I am the Ground Station Lead at Arbalest Rocketry. Full bio coming soon.",
-    email: "jose@example.com",
+    bio: "As an Electrical Engineering student at the Lassonde School of Engineering and the Ground Station Team Lead, Jose specializes in developing reliable wireless telemetry systems. Leveraging his background in embedded hardware, he directs the design of custom RF and digital interfaces for real-time monitoring of critical flight data.",
+    email: "jzambra@my.yorku.ca",
   },
 ];
 
@@ -211,7 +211,7 @@ function MemberModal({ member, onClose }) {
   return (
     <div className="member-modal-backdrop" onClick={onClose}>
       <div
-        className="member-modal"
+        className={`member-modal${member.bio || member.email ? "" : " member-modal-compact"}`}
         role="dialog"
         aria-modal="true"
         aria-labelledby="member-modal-name"
@@ -223,14 +223,18 @@ function MemberModal({ member, onClose }) {
           <h2 id="member-modal-name" className="member-modal-name">{member.name}</h2>
           <p className="member-modal-role">{member.role}</p>
         </div>
-        <MemberPhoto member={member} className="member-modal-photo" lazy={false} />
-        {member.bio && <p className="member-modal-bio">{member.bio}</p>}
-        {member.email && (
-          <div className="member-modal-contact">
-            <h3 className="member-modal-contact-title">Contact</h3>
-            <a href={`mailto:${member.email}`}>{member.email}</a>
+        <div className="member-modal-body">
+          <MemberPhoto member={member} className="member-modal-photo" lazy={false} />
+          <div className="member-modal-info">
+            {member.bio && <p className="member-modal-bio">{member.bio}</p>}
+            {member.email && (
+              <div className="member-modal-contact">
+                <h3 className="member-modal-contact-title">Contact</h3>
+                <a href={`mailto:${member.email}`}>{member.email}</a>
+              </div>
+            )}
           </div>
-        )}
+        </div>
       </div>
     </div>
   );
@@ -263,7 +267,7 @@ export default function MembersPage() {
               Become part of Arbalest Rocketry and help us build the future of aerospace innovation.
             </p>
             <a
-              href="https://discord.gg/HyNhqknDFN"
+              href="https://discord.gg/qDub9Uvx8J"
               target="_blank"
               rel="noopener noreferrer"
               className="join-btn"

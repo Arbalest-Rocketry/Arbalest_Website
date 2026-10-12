@@ -21,7 +21,7 @@ export default function ContactPage() {
               Connect with us on Discord to get involved in projects, events, and meetings.
             </p>
             <a
-              href="https://discord.gg/HyNhqknDFN"
+              href="https://discord.gg/qDub9Uvx8J"
               target="_blank"
               rel="noopener noreferrer"
               className="contact-btn"

@@ -8,7 +8,7 @@ export const rockets = [
     desc: "Our first ever liquid engine rocket, Moose 1 is set to compete at Launch Canada 2027",
     awards: [],
     img: null,
-    link: null,
+    link: "/moose1",
   },
   {
     name: "Red Robin",
@@ -16,7 +16,7 @@ export const rockets = [
     desc: "Description coming soon.",
     awards: [],
     img: null,
-    link: null,
+    link: "/redrobin",
   },
   {
     name: "Goose IV",
