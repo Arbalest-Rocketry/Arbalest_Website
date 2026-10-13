@@ -86,13 +86,6 @@ const teamMembers = [
     email: "georgiilavreniuk13@gmail.com",
   },
   {
-    name: "Moiza Mahmood",
-    role: "Business Lead",
-    img: "/members/MoizaMahmood.webp",
-    bio: "",
-    email: "",
-  },
-  {
     name: "Seyed Masoumi Lari",
     role: "Payload Science Lead",
     img: "/members/SeyedMasoumiLari.webp",
@@ -251,12 +244,14 @@ export default function MembersPage() {
             Meet the Leads
           </h1>
 
+          {/* Top row: President and Vice President (first entry in teamMembers) */}
           <div className="team-grid team-grid-lead" role="list">
             <MemberCard member={president} onOpen={setSelected} />
+            <MemberCard member={teamMembers[0]} onOpen={setSelected} />
           </div>
 
           <div className="team-grid" role="list">
-            {teamMembers.map((m) => (
+            {teamMembers.slice(1).map((m) => (
               <MemberCard key={m.name} member={m} onOpen={setSelected} />
             ))}
           </div>

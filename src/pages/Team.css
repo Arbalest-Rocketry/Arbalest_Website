@@ -113,9 +113,15 @@
 
 /* President sits alone, centered, above the rest */
 .team-grid-lead {
-  grid-template-columns: minmax(220px, 280px);
+  grid-template-columns: repeat(2, minmax(220px, 280px));
   justify-content: center;
   margin-bottom: clamp(1rem, 2.2vw, 2rem);
+}
+
+@media (max-width: 520px) {
+  .team-grid-lead {
+    grid-template-columns: minmax(220px, 280px);
+  }
 }
 
 /* Text */
