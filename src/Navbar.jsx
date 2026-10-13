@@ -70,7 +70,7 @@ export default function Navbar() {
         <ul className="nav-links">
           <li><Link to="/about" onClick={closeMenu}>About</Link></li>
           <li><Link to="/subteams" onClick={closeMenu}>Subteams</Link></li>
-          <li><Link to="/rockets" onClick={closeMenu}>Rockets</Link></li>
+          <li><Link to="/" state={{ scrollTo: "rockets" }} onClick={closeMenu}>Rockets</Link></li>
           <li><Link to="/members" onClick={closeMenu}>Members</Link></li>
           <li><Link to="/sponsorships" onClick={closeMenu}>Sponsorships</Link></li>
           <li><Link to="/contact" onClick={closeMenu}>Contact</Link></li>
@@ -83,13 +83,13 @@ export default function Navbar() {
         {[
           ["About", "/about"],
           ["Subteams", "/subteams"],
-          ["Rockets", "/rockets"],
+          ["Rockets", "/", { scrollTo: "rockets" }],
           ["Members", "/members"],
           ["Sponsorships", "/sponsorships"],
           ["Contact", "/contact"],
           ["Donations", "/donations"],
-        ].map(([label, path]) => (
-          <Link key={path} to={path} onClick={closeMenu}>
+        ].map(([label, path, state]) => (
+          <Link key={label} to={path} state={state} onClick={closeMenu}>
             {label}
           </Link>
         ))}

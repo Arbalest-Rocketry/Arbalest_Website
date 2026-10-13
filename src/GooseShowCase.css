@@ -223,3 +223,8 @@
     flex: none;
   }
 }
+
+/* Navbar "Rockets" scrolls here; leave room for the fixed navbar */
+.home-rockets-anchor {
+  scroll-margin-top: 110px;
+}
