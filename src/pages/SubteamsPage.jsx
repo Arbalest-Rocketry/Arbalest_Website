@@ -1,91 +1,94 @@
 import "./Subteams.css";
 import Footer from "../Footer";
 
+// Team structure. Edit the lists below to change the chart.
+const executives = {
+  top: "President",
+  second: ["Vice President", "Treasurer"],
+};
+
+const subteams = [
+  { name: "Business", color: "#b7f34a", leads: ["Business"] },
+  {
+    name: "Electrical",
+    color: "#6b7bff",
+    leads: ["Avionics", "Ground Station", "Imaging"],
+  },
+  {
+    name: "Mechanical",
+    color: "#3fe0e8",
+    leads: ["Aerostructure", "Composites", "Launch Rail"],
+  },
+  {
+    name: "Propulsion",
+    color: "#ff3b3b",
+    leads: ["Propulsion", "Vehicle Integration", "Fluid Systems", "Test Stand"],
+  },
+  {
+    name: "Payload",
+    color: "#c58cff",
+    leads: [
+      "Payload Electrical",
+      "Science",
+      "Engineering",
+      "Software",
+    ],
+  },
+];
+
+const memberTiers = ["Senior Members", "General Members"];
+
 export default function SubteamsPage() {
   return (
     <>
       <section className="structure">
-        <h1 className="structure-title">Arbalest Rocketry Club Structure</h1>
+        <h1 className="structure-title">Team Structure</h1>
 
         <div className="org-chart">
-          {/* Top level */}
-          <div className="org-row">
-            <div className="org-box pink">President / Chief Engineer</div>
+          {/* Executives */}
+          <div className="org-exec">
+            <div className="org-exec-box org-exec-top">{executives.top}</div>
+            <div className="org-line" aria-hidden="true" />
+            <div className="org-exec-row">
+              {executives.second.map((role) => (
+                <div key={role} className="org-exec-box">
+                  {role}
+                </div>
+              ))}
+            </div>
+            <div className="org-line" aria-hidden="true" />
           </div>
 
-          <div className="org-row">
-            <div className="org-box yellow">Vice President</div>
-            <div className="org-box orange">Academic Liaison</div>
-            <div className="org-box green">Administrative Supervisor</div>
+          {/* Subteams and their leads */}
+          <div className="org-teams">
+            {subteams.map((team) => (
+              <div
+                key={team.name}
+                className="org-team"
+                style={{ "--team-color": team.color }}
+              >
+                <h2 className="org-team-name">{team.name}</h2>
+                <ul className="org-leads">
+                  {team.leads.map((lead) => (
+                    <li key={lead}>{lead}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
 
-          <div className="org-row">
-            <div className="org-box gray">Mechanical Lead</div>
-            <div className="org-box light-blue">Avionics Lead</div>
-            <div className="org-box purple">Liquid Lead</div>
-            <div className="org-box red">Social Media Manager</div>
-            <div className="org-box blue">Sponsorship Manager</div>
-          </div>
-
-          {/* Mechanical team */}
-          <div className="org-subrow">
-            <div className="org-sub gray">
-              <h3>Simulations Lead</h3>
-              <p>Oversees aerodynamic and structural simulations.</p>
-            </div>
-            <div className="org-sub gray">
-              <h3>Controls Systems Lead</h3>
-              <p>Handles actuation, servos, and feedback systems.</p>
-            </div>
-            <div className="org-sub gray">
-              <h3>Mech Member</h3>
-              <p>Supports fabrication, testing, and assembly.</p>
-            </div>
-          </div>
-
-          {/* Avionics team */}
-          <div className="org-subrow">
-            <div className="org-sub light-blue">
-              <h3>Ground Station Lead</h3>
-              <p>Maintains real-time telemetry and communications.</p>
-            </div>
-            <div className="org-sub light-blue">
-              <h3>Flight Computer Lead</h3>
-              <p>Designs and programs onboard computers.</p>
-            </div>
-            <div className="org-sub light-blue">
-              <h3>Flight Computer Software Lead</h3>
-              <p>Develops firmware and data processing tools.</p>
-            </div>
-          </div>
-
-          {/* Liquid team */}
-          <div className="org-subrow">
-            <div className="org-sub purple">
-              <h3>Test Stand Designer</h3>
-              <p>Builds and operates liquid test infrastructure.</p>
-            </div>
-            <div className="org-sub purple">
-              <h3>Liquid Member</h3>
-              <p>Assists with fuel systems and engine analysis.</p>
-            </div>
-          </div>
-
-          {/* Media & Sponsorship */}
-          <div className="org-subrow">
-            <div className="org-sub red">
-              <h3>Social Media Member</h3>
-              <p>Handles posts, content, and digital outreach.</p>
-            </div>
-            <div className="org-sub blue">
-              <h3>Sponsorship Member</h3>
-              <p>Connects with partners and manages funding.</p>
-            </div>
+          {/* Members across every subteam */}
+          <div className="org-members">
+            {memberTiers.map((tier) => (
+              <div key={tier} className="org-member-tier">
+                {tier}
+              </div>
+            ))}
+            <p className="org-members-note">Members join any subteam above.</p>
           </div>
         </div>
       </section>
 
-      {/* ✅ Footer added at the bottom */}
       <Footer />
     </>
   );

@@ -207,3 +207,19 @@
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+
+/* Landscape photos (e.g. Red Robin) get more room */
+.goose-image-wide {
+  flex: 0 0 58%;
+}
+
+.goose-image-wide img {
+  max-width: none;
+  aspect-ratio: 4 / 3;
+}
+
+@media (max-width: 1024px) {
+  .goose-image-wide {
+    flex: none;
+  }
+}

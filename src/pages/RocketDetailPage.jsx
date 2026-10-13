@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./RocketDetail.css";
 import Footer from "../Footer";
 
@@ -7,25 +8,30 @@ export const rocketPages = {
   moose1: {
     name: "Moose 1",
     tag: "Launch Canada 2027 · Upcoming",
-    subtitle: "Our first ever liquid engine rocket.",
+    subtitle: "Our first ever liquid-fuelled rocket, now in development.",
     hero: null,
     story: [
-      "Our first ever liquid engine rocket, Moose 1 is set to compete at Launch Canada 2027.",
+      "Moose 1 is our first ever liquid-fuelled rocket, and it is in development right now. The team is currently testing the Moose engine on our static fire stand as we build toward Launch Canada 2027.",
     ],
     gallery: [],
   },
   redrobin: {
     name: "Red Robin",
-    tag: "2026",
-    subtitle: "Mission details coming soon.",
-    hero: null,
-    story: [],
+    tag: "2026 Launch Canada",
+    subtitle: "2nd place in Restricted Category · 2nd place in Payload Challenge",
+    hero: "/redrobin/redrobin.webp",
+    video: "dX_ge8wRFuY",
+    story: [
+      "Red Robin was built to compete in the restricted category at Launch Canada 2026, and it came home with two second place finishes, one in the restricted category and one in the payload challenge.",
+      "Behind that result are months of design reviews, test fits and long nights in the shop. Every subteam had a hand in it, from the airframe and recovery system to the avionics and the payload riding inside. Red Robin showed what the team can do when everything comes together on launch day, and it sets the bar for Moose 1 and every rocket that follows.",
+    ],
     gallery: [],
   },
 };
 
 export default function RocketDetailPage({ id }) {
   const rocket = rocketPages[id];
+  const [playVideo, setPlayVideo] = useState(false);
 
   return (
     <>
@@ -51,6 +57,35 @@ export default function RocketDetailPage({ id }) {
             <p className="rp-soon">Full story coming soon.</p>
           )}
         </div>
+
+        {rocket.video && (
+          <div className="rp-video-section">
+            <h2>Watch the Launch</h2>
+            <div className="rp-video">
+              {playVideo ? (
+                <iframe
+                  src={`https://www.youtube.com/embed/${rocket.video}?autoplay=1`}
+                  title={`${rocket.name} launch video`}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              ) : (
+                <button
+                  className="rp-video-poster"
+                  onClick={() => setPlayVideo(true)}
+                  aria-label={`Play ${rocket.name} launch video`}
+                >
+                  <img
+                    src={`https://i.ytimg.com/vi/${rocket.video}/hqdefault.jpg`}
+                    alt=""
+                    loading="lazy"
+                  />
+                  <span className="rp-play">▶</span>
+                </button>
+              )}
+            </div>
+          </div>
+        )}
 
         <div className="rp-gallery-section">
           <h2>Gallery</h2>

@@ -5,17 +5,18 @@ export const rockets = [
   {
     name: "Moose 1",
     year: "Launch Canada 2027 · Upcoming",
-    desc: "Our first ever liquid engine rocket, Moose 1 is set to compete at Launch Canada 2027",
+    desc: "Our first ever liquid-fuelled rocket, Moose 1 is in development now. The team is currently testing the Moose engine on our static fire stand as we build toward Launch Canada 2027",
     awards: [],
-    img: null,
+    img: "/moose1/moose1-engine.webp",
     link: "/moose1",
   },
   {
     name: "Red Robin",
-    year: "2026",
-    desc: "Description coming soon.",
-    awards: [],
-    img: null,
+    year: "2026 Launch Canada",
+    desc: "Red Robin took on the restricted category at Launch Canada 2026 and came home with two second place finishes, proof that our team can take a design from the shop floor all the way to the podium",
+    awards: ["2nd place in Restricted Category", "2nd place in Payload Challenge"],
+    img: "/redrobin/redrobin.webp",
+    wide: true,
     link: "/redrobin",
   },
   {
@@ -72,7 +73,7 @@ export default function GooseShowcase() {
             )}
           </div>
 
-          <div className="goose-image">
+          <div className={`goose-image${rocket.wide ? " goose-image-wide" : ""}`}>
             {rocket.img ? (
               <img src={rocket.img} alt={rocket.name} />
             ) : (

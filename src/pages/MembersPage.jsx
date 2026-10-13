@@ -103,8 +103,8 @@ const teamMembers = [
     name: "Mihir Patel",
     role: "Chief Design Officer",
     img: "/members/MihirPatel.webp",
-    bio: "",
-    email: "",
+    bio: "He's Arbalest's Chief Design Officer, responsible for ensuring the rocket produces thrust rather than 5 big booms. With 6–7 successful launches and nominal recoveries under his belt, he's hoping to add another to the list preferably in one piece.",
+    email: "mihir4@my.yorku.ca",
   },
   {
     name: "Tom Pham",

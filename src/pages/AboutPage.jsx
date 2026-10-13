@@ -23,7 +23,7 @@ export default function AboutPage() {
     <>
       <section className="about-hero">
         <img
-          src="/goose4/goose4-hero.webp"
+          src="/images/about-team.webp"
           alt="The Arbalest Rocketry team with Goose IV"
           className="about-hero-img"
           fetchpriority="high"

@@ -79,6 +79,7 @@
 }
 
 .rp-story,
+.rp-video-section,
 .rp-gallery-section {
   width: min(100%, 850px);
   text-align: center;
@@ -120,4 +121,59 @@
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
+}
+
+/* ===== VIDEO ===== */
+.rp-video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 0 40px rgba(255, 0, 0, 0.3);
+}
+
+.rp-video iframe,
+.rp-video-poster {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.rp-video-poster,
+.rp-video-poster:hover {
+  padding: 0;
+  min-height: 0;
+  border: 0;
+  border-radius: 0;
+  background: #000;
+  cursor: pointer;
+}
+
+.rp-video-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.rp-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(230, 0, 0, 0.9);
+  color: #fff;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 4px;
+  box-sizing: border-box;
 }
