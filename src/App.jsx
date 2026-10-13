@@ -1,6 +1,7 @@
 import { useLayoutEffect } from "react";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
+import GalleryLightbox from "./GalleryLightbox";
 import HomePage from "./pages/HomePage";
 import Goose2Page from "./pages/Goose2Page";
 import Goose3Page from "./pages/Goose3Page";
@@ -31,6 +32,7 @@ export default function App() {
   return (
     <>
       <ScrollToTop />
+      <GalleryLightbox />
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />

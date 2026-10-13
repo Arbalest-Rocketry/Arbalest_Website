@@ -1,0 +1,93 @@
+/* Gallery photos are clickable */
+.goose2-gallery img,
+.gallery img,
+.goose4-gallery img,
+.rp-gallery img {
+  cursor: pointer;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  background: rgba(0, 0, 0, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3.5rem 4rem;
+  box-sizing: border-box;
+}
+
+.lightbox-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+  cursor: default;
+}
+
+.lightbox-btn {
+  position: absolute;
+  min-height: 0;
+  padding: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 0;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 1.8rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.lightbox-btn:hover {
+  background: #e60000;
+  border: 0;
+}
+
+.lightbox-close {
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.3rem;
+}
+
+.lightbox-prev {
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lightbox-next {
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lightbox-count {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  color: #ccc;
+  font-family: "Tomorrow", system-ui, Helvetica, Arial, sans-serif;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 640px) {
+  .lightbox {
+    padding: 3.5rem 0.5rem;
+  }
+
+  .lightbox-prev,
+  .lightbox-next {
+    top: auto;
+    bottom: 0.5rem;
+    transform: none;
+  }
+}

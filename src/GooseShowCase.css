@@ -228,3 +228,13 @@
 .home-rockets-anchor {
   scroll-margin-top: 110px;
 }
+
+/* Rocket cards use the Tomorrow font */
+.goose-text,
+.goose-text h1,
+.goose-text h4,
+.goose-text p,
+.goose-text li,
+.goose-text .learn-more {
+  font-family: "Tomorrow", system-ui, Helvetica, Arial, sans-serif;
+}
