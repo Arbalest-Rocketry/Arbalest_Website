@@ -25,7 +25,7 @@ export const rocketPages = {
       "Red Robin was built to compete in the restricted category at Launch Canada 2026, and it came home with two second place finishes, one in the restricted category and one in the payload challenge.",
       "Behind that result are months of design reviews, test fits and long nights in the shop. Every subteam had a hand in it, from the airframe and recovery system to the avionics and the payload riding inside. Red Robin showed what the team can do when everything comes together on launch day, and it sets the bar for Moose 1 and every rocket that follows.",
     ],
-    gallery: [],
+    gallery: Array.from({ length: 15 }, (_, i) => `/redrobin/redrobin-${i + 1}.webp`),
   },
 };
 
