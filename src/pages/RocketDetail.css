@@ -177,3 +177,18 @@
   padding-left: 4px;
   box-sizing: border-box;
 }
+
+/* Gallery: 4 per row on desktop */
+.rp-gallery-section {
+  width: min(100%, 1200px);
+}
+
+.rp-gallery {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 900px) {
+  .rp-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
